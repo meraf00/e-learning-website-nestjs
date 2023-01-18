@@ -12,5 +12,5 @@
 
 
 ## Selected project
-- [Source code](https://meraf00.github.io/UGR-8834-13/) 
-- [Hosted github page](https://github.com/meraf00/UGR-8834-13)
+- [Source code](https://github.com/meraf00/UGR-8834-13)
+- [Hosted github page](https://meraf00.github.io/UGR-8834-13/)
