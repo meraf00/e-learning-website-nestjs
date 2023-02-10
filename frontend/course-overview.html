@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Discrete Mathematics course overview" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Course overview</title>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav mx-4 mb-2 mb-md-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="user-dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row mt-1">
+      <aside class="col-lg-2 col-md-12 mt-4 bg-white">
+        <h1 class="d-flex align-items-center mb-3 text-decoration-none border-bottom">
+          <span class="fs-5 fw-semibold px-2">Course Outline</span>
+        </h1>
+
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <a class="btn d-inline-flex align-items-center rounded border-0" href="#description">Description</a>
+          </li>
+          <li class="mb-1">
+            <a class="btn d-inline-flex align-items-center rounded border-0" href="#description">Instructors</a>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse" data-bs-target="#resources" aria-expanded="false">
+              Resources
+            </button>
+            <div class="collapse" id="resources">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#reading-material" class="link-dark d-inline-flex text-decoration-none rounded">Reading
+                    materials</a>
+                </li>
+                <li><a href="#videos" class="link-dark d-inline-flex text-decoration-none rounded">Videos</a></li>
+                <li><a href="#audios" class="link-dark d-inline-flex text-decoration-none rounded">Audios</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+        </ul>
+      </aside>
+
+      <article class="col-lg-8 col-md-12 mt-3">
+        <header class="container mb-2">
+          <h1>Discrete Mathematics for Computer Science</h1>
+          <a class="btn btn-primary" href="course.html">Start course</a>
+        </header>
+
+        <section class="container">
+          <h2 id="description">Description</h2>
+
+          <p>
+            Discrete mathematics forms the mathematical foundation of computer and
+            information science. It is also a fascinating subject in itself.
+            Learners will become familiar with a broad range of mathematical
+            objects like sets, functions, relations, graphs, that are omnipresent
+            in computer science. Perhaps more importantly, they will reach a
+            certain level of mathematical maturity - being able to understand
+            formal statements and their proofs; coming up with rigorous proofs
+            themselves; and coming up with interesting results.
+          </p>
+
+          <p>
+            A discrete mathematics course has more than one purpose. Students
+            should learn a particular set of mathematical facts and how to apply
+            them; more importantly, such a course should teach students how to
+            think logically and mathematically.
+          </p>
+        </section>
+
+        <section class="container">
+          <h2 id="instructor">Instructors</h2>
+
+          <ul>
+            <li>Henok Alemu, PhD.</li>
+            <li>Hewan Sintayehu, PhD.</li>
+            <li>Kiros Adugna, PhD.</li>
+          </ul>
+        </section>
+
+        <section class="container mt-5">
+          <hgroup>
+            <h2 id="resource">Resources</h2>
+            <h3 id="reading-material">Reading materials</h3>
+          </hgroup>
+
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary">
+              <a class="link link--undecorated"
+                href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-Rosen-ebook/dp/B07FF9DY66">
+                Discrete Mathematics and Its Applications 8th Edition, by Kenneth
+                Rosen (Author)
+              </a>
+            </li>
+            <li class="list-group-item list-group-item-secondary">
+              <a class="link link--undecorated"
+                href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B00B6FAZ2Q">
+                Discrete Mathematics with Applications 4th Edition, Susanna S. Epp
+                (Author)
+              </a>
+            </li>
+          </ul>
+
+          <h3 class="mt-4" id="videos">Videos</h3>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary">
+              <div class="card mb-3" style="max-width: 60rem;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <a href="course.html#introduction">
+                      <img class="thumbnail" src="images/video-thumbnails/introduction-to-logic.png"
+                        alt="Introduction to Logic" />
+                    </a>
+                  </div>
+                  <div class="col-md-8 text-black">
+                    <strong>Introduction to Logic</strong>
+
+                    <p>
+                      A beginner friendly introduction to formal mathematical logic.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="mt-4" id="audios">Audios</h3>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary text-black">
+              <audio controls>
+                <source src="audios/learn-to-code.mp3" />
+              </audio>
+
+              <div>
+                <strong>How to learn programming?</strong>
+                <p>
+                  Here are some tips on how you can to avoid wasting time when
+                  you're learning programming.
+                </p>
+              </div>
+
+              <div id="audio-1-transcript">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse" data-bs-target="#transcript-1" aria-expanded="false">
+                  Audio Transcript
+                </button>
+                <p class="collapse" id="transcript-1">
+                  When you're learning to code do you ever feel like you're stuck
+                  learning the same thing over and over again?
+                </p>
+              </div>
+
+            </li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Sitemap</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About us</a></li>
+            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Contributers</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="http://www.aau.edu.et/" class="nav-link p-0 text-muted">Addis Ababa
+                University</a></li>
+            <li class="nav-item mb-2"><a href="http://www.bdu.edu.et/" class="nav-link p-0 text-muted">Bahirdar
+                University</a></li>
+            <li class="nav-item mb-2"><a href="https://moe.gov.et/" class="nav-link p-0 text-muted">Ministry of
+                Eduction</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>Copyright &copy; 2022 E-Learning</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="https://facebook.com">
+              <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://t.me/elearning000">
+              <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://twitter.com">
+              <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://youtube.com">
+              <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

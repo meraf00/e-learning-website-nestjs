@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="User dashboard on E-learing platform" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>My Dashboard</title>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav mx-4 mb-2 mb-md-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link active" href="user-dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container mt-5 min-vh-100">
+    <h1>User Dashboard</h1>
+
+    <div>
+      <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#" class="tab-button nav-link active" data-target="saved">Saved</a></li>
+        <li class="nav-item"><a href="#" class="tab-button nav-link" data-target="in-progress">In progress</a></li>
+        <li class="nav-item"><a href="#" class="tab-button nav-link" data-target="completed">Completed</a></li>
+      </ul>
+
+      <ul class="list-unstyled px-5" id="saved">
+
+        <li class="mt-2">
+          <div class="card mb-3" style="max-width: 60rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/courses/discrete-mathematics.png" class="card-img"
+                  alt="Introduction to Discrete Mathematics">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Introduction to Discrete Mathematics</h5>
+                  <p class="card-text">This course covers mathematical structures that can be considered
+                    "discrete" rather than "continuous"</p>
+  
+                  <a href="course-overview.html" class="btn btn-primary">Start course</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="mt-2">
+          <div class="card mb-3" style="max-width: 60rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/courses/discrete-mathematics.png" class="card-img"
+                  alt="Introduction to Discrete Mathematics">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Introduction to Discrete Mathematics</h5>
+                  <p class="card-text">This course covers mathematical structures that can be considered
+                    "discrete" rather than "continuous"</p>
+  
+                  <a href="course-overview.html" class="btn btn-primary">Start course</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="mt-2">
+          <div class="card mb-3" style="max-width: 60rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/courses/discrete-mathematics.png" class="card-img"
+                  alt="Introduction to Discrete Mathematics">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Introduction to Discrete Mathematics</h5>
+                  <p class="card-text">This course covers mathematical structures that can be considered
+                    "discrete" rather than "continuous"</p>
+  
+                  <a href="course-overview.html" class="btn btn-primary">Start course</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>        
+      </ul>
+
+      <ul class="list-unstyled px-5 collapse" id="in-progress">
+        <li class="mt-2"><strong>You have no course in progress.</strong></li>
+
+      </ul>
+
+      <ul class="list-unstyled px-5 collapse" id="completed">
+        <li class="mt-2">
+          <div class="card mb-3" style="max-width: 60rem;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/courses/discrete-mathematics.png" class="card-img"
+                  alt="Introduction to Discrete Mathematics">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Introduction to Discrete Mathematics</h5>
+                  <p class="card-text">This course covers mathematical structures that can be considered
+                    "discrete" rather than "continuous"</p>
+  
+                  <a href="course-overview.html" class="btn btn-primary">Start course</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li> 
+      </ul>
+    </div>
+
+
+
+  </section>
+
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Sitemap</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About us</a></li>
+            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Contributers</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="http://www.aau.edu.et/" class="nav-link p-0 text-muted">Addis Ababa
+                University</a></li>
+            <li class="nav-item mb-2"><a href="http://www.bdu.edu.et/" class="nav-link p-0 text-muted">Bahirdar
+                University</a></li>
+            <li class="nav-item mb-2"><a href="https://moe.gov.et/" class="nav-link p-0 text-muted">Ministry of
+                Eduction</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>Copyright &copy; 2022 E-Learning</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="https://facebook.com">
+              <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://t.me/elearning000">
+              <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://twitter.com">
+              <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://youtube.com">
+              <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
