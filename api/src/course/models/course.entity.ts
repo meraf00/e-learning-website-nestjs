@@ -1,4 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { Enrollment } from "../../enrollment/models/enrollement.entity";
 
 @Entity()
 export class Course {
@@ -17,5 +18,8 @@ export class Course {
 
   @Column()
   img_url: string;
+
+  @OneToMany(() => Enrollment, (enrollment) => enrollment.course, { onDelete: 'CASCADE'})
+  enrollments: Enrollment
 
 }
