@@ -1,0 +1,14 @@
+### Get the first 50 courses
+GET http://localhost:3000/api/course/ HTTP/1.1
+
+
+### Get the second 50 courses
+GET http://localhost:3000/api/course/?page=1 HTTP/1.1
+
+
+### Get the first 1 course
+GET http://localhost:3000/api/course/?page=0&limit=1 HTTP/1.1
+
+
+### Get course by id
+GET http://localhost:3000/api/course/1 HTTP/1.1

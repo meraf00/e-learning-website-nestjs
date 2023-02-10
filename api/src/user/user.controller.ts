@@ -7,13 +7,13 @@ import { LoginUserDto } from './models/dto/LoginUser.dto';
 import { UserI } from './models/user.interface';
 import { UserService } from './user.service';
 
-@Controller('users')
+@Controller('user')
 export class UserController {
 
   constructor(private userService: UserService) { }
   
   @Post()
-  create(@Body() createdUserDto: CreateUserDto): Observable<UserI> {
+  create(@Body() createdUserDto: CreateUserDto): Observable<UserI> {    
     return this.userService.create(createdUserDto);
   }
   
@@ -33,9 +33,7 @@ export class UserController {
   
   @UseGuards(JwtAuthGuard)
   @Get()
-  getUser(@Req() request): Observable<UserI[]> {
-    return this.userService.findAll();
+  getUser(@Req() request): Observable<UserI> {
+    return this.userService.findOne(request.user.id);
   }
-
-
 }

@@ -6,16 +6,16 @@ import { AuthService } from '../auth/auth.service';
 import { Repository } from 'typeorm';
 import { CreateUserDto } from './models/dto/CreateUser.dto';
 import { LoginUserDto } from './models/dto/LoginUser.dto';
-import { UserEntity } from './models/user.entity';
+import { User } from './models/user.entity';
 import { UserI } from './models/user.interface';
 
 @Injectable()
 export class UserService {
 
   constructor(
-    @InjectRepository(UserEntity)
-    private userRepository: Repository<UserEntity>,
-    private authService: AuthService
+    @InjectRepository(User)
+      private userRepository: Repository<User>,
+      private authService: AuthService
   ) { }
 
   create(createdUserDto: CreateUserDto): Observable<UserI> {
@@ -54,28 +54,25 @@ export class UserService {
                   switchMap((user: UserI) => this.authService.generateJwt(user))
                 )
               } else {
-                throw new HttpException('Login was not Successfulll', HttpStatus.UNAUTHORIZED);
+                throw new HttpException('Email or password is incorrect.', HttpStatus.UNAUTHORIZED);
               }
             })
           )
         } else {
-          throw new HttpException('User not found', HttpStatus.NOT_FOUND);
+          throw new HttpException('Email or password is incorrect.', HttpStatus.UNAUTHORIZED);
         }
       }
       )
     )
   }
 
-  findAll(): Observable<UserI[]> {
-    return from(this.userRepository.find());
-  }
 
   findOne(id: number): Observable<UserI> {
     return from(this.userRepository.findOne({ id }));
   }
 
   findUserByEmail(email: string): Observable<UserI> {
-    return from(this.userRepository.findOne({ email }, { select: ['id', 'email', 'name', 'password'] }));
+    return from(this.userRepository.findOne({ email }, { select: ['id', 'email', 'firstname', 'lastname', 'password'] }));
   }
 
   private validatePassword(password: string, storedPasswordHash: string): Observable<boolean> {
@@ -97,28 +94,5 @@ export class UserService {
 
   async getUserById(userId: number): Promise<UserI> {                          
     return await this.userRepository.findOne({id: userId});
-}
-
-async getUserByEmail(userEmail: string): Promise<UserI> {                          
-    return await this.userRepository.findOne({email: userEmail});
-}
-
-async update(userData: any): Promise<string> { 
-    const oldUser = await this.getUserById(userData.id);                        
-    
-    await this.userRepository.save(userData);
-    
-    if (oldUser) {
-        return "USER_DATA_UPDATED";
-    }
-
-    return "NEW_USER_CREATED";
-}
-
-async deleteUserById(userId: number) {
-    await this.userRepository.delete(userId);
-}
-
-
-
+  }
 }
