@@ -1,0 +1,30 @@
+### Rate course
+POST http://localhost:3000/api/rating/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJBYmViZSIsImxhc3RuYW1lIjoiS2ViZWRlIiwiZW1haWwiOiJhYmViZS5rZWJlZGVAZ21haWwuY29tIn0sImlhdCI6MTY3NjA1MzA4NCwiZXhwIjoxNjc2MDYzMDg0fQ.xPjvJkPIooQc4QlYDBh_aUgJKpuX7gxzbSyRwbdIG7Q
+Content-Type: application/json
+
+{
+    "rating": 2    
+}
+
+
+### Get course rating
+GET http://localhost:3000/api/rating/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJBYmViZSIsImxhc3RuYW1lIjoiS2ViZWRlIiwiZW1haWwiOiJhYmViZS5rZWJlZGVAZ21haWwuY29tIn0sImlhdCI6MTY3NjA1MzA4NCwiZXhwIjoxNjc2MDYzMDg0fQ.xPjvJkPIooQc4QlYDBh_aUgJKpuX7gxzbSyRwbdIG7Q
+
+
+### Update rating
+POST http://localhost:3000/api/rating/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJBYmViZSIsImxhc3RuYW1lIjoiS2ViZWRlIiwiZW1haWwiOiJhYmViZS5rZWJlZGVAZ21haWwuY29tIn0sImlhdCI6MTY3NjA1MzA4NCwiZXhwIjoxNjc2MDYzMDg0fQ.xPjvJkPIooQc4QlYDBh_aUgJKpuX7gxzbSyRwbdIG7Q
+Content-Type: application/json
+
+{    
+    "rating": 3
+}
+
+
+
+### Delete rating
+DELETE  http://localhost:3000/api/rating/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdG5hbWUiOiJBYmViZSIsImxhc3RuYW1lIjoiS2ViZWRlIiwiZW1haWwiOiJhYmViZS5rZWJlZGVAZ21haWwuY29tIn0sImlhdCI6MTY3NjA1MzA4NCwiZXhwIjoxNjc2MDYzMDg0fQ.xPjvJkPIooQc4QlYDBh_aUgJKpuX7gxzbSyRwbdIG7Q
+Content-Type: application/json

@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import {TypeOrmModule} from '@nestjs/typeorm';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { CourseModule } from './course/course.module';
 import { EnrollmentModule } from './enrollment/enrollement.module';
+import { RatingModule } from './rating/rating.module';
 
 @Module({
   imports: [
@@ -15,12 +16,13 @@ import { EnrollmentModule } from './enrollment/enrollement.module';
       type: 'sqlite',
       database: "elearning.sqlite",
       autoLoadEntities: true,
-      synchronize: true
+      synchronize: true,      
     }),
     UserModule,
     AuthModule,
     CourseModule,
-    EnrollmentModule
+    EnrollmentModule,
+    RatingModule
   ],
   controllers: [AppController],
   providers: [AppService],
