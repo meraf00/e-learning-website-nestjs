@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Introductory course for Object Oriented Programming"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Introduction to Object Oriented Programming</title>
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img
+          class="navbar-brand"
+          src="images/logo.png"
+          width="50px"
+          height="50px"
+          alt="E-learning logo"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav mx-4 mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item" id="login-btn">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item" id="signup-btn">
+            <a class="nav-link" href="signup.html">Register</a>
+          </li>
+          <li class="nav-item collapse" id="dashboard-btn">
+            <a class="nav-link" href="user-dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row mt-1">
+        <aside class="col-lg-2 col-md-12 mt-4 bg-white">
+          <h1
+            class="d-flex align-items-center mb-3 text-decoration-none border-bottom"
+          >
+            <span class="fs-5 fw-semibold px-2"
+              >Object Oriented Programming</span
+            >
+          </h1>
+          <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+              <a
+                href="#introduction"
+                class="btn d-inline-flex align-items-center rounded border-0"
+                aria-expanded="true"
+              >
+                Introduction
+              </a>
+            </li>
+            <li class="mb-1">
+              <button
+                class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#subtitle-1"
+                aria-expanded="false"
+              >
+                Programming Paradigms
+              </button>
+              <div class="collapse" id="subtitle-1">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li>
+                    <a
+                      href="#proposition"
+                      class="link-dark d-inline-flex text-decoration-none rounded"
+                      >Structural</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#rules-of-inference"
+                      class="link-dark d-inline-flex text-decoration-none rounded"
+                      >Object Oriented</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="border-top my-3"></li>
+          </ul>
+        </aside>
+
+        <article class="col-lg-7 col-md-12 mt-3">
+          <h1 id="introduction" class="p-2">
+            Introduction to Programming Paradigms
+          </h1>
+
+          <section class="container">
+            <video class="w-100" controls>
+              <source type="video/mp4" src="videos/lecture-1.mp4" />
+              <track
+                src="videos/lecture-1.vtt"
+                label="English"
+                kind="captions"
+                srclang="en-us"
+                default
+              />
+            </video>
+
+            <div>
+              <button
+                class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#transcript-1"
+                aria-expanded="false"
+              >
+                Video Transcript
+              </button>
+              <p class="p-3 text-bg-light collapse" id="transcript-1">
+                Now whats interesting about this is the way in which it worked.
+                Because this machine, was dedicated to playing chess.
+              </p>
+            </div>
+          </section>
+
+          <section class="container">
+            <h1 id="propositional-logic">Programming Paradigms</h1>
+
+            <h2 id="proposition">Structural</h2>
+
+            <p>
+              A proposition is a declarative sentence (that is, a sentence that
+              declares a fact) that is either true or false, but not both. We
+              use letters to denote propositional variables(orsentential
+              variables), that is, variables that represent propositions, just
+              as letters are used to denote numerical variables. The
+              conventional letters used for propositional variables are p, q, r,
+              s, … . The truth value of a proposition
+            </p>
+
+            <h2 id="rules-of-inference">Object Oriented</h2>
+
+            <p>
+              An argument in propositional logic is a sequence of propositions.
+              All but the final proposition in the argument are called premises
+              and the final proposition is called the conclusion. An argument is
+              valid if the truth of all its premises implies that the conclusion
+              is true. An argument form in propositional logic is a sequence of
+              compound propositions involving propositional variables. An
+              argument form is valid if no matter which particular propositions
+              are substituted for the propositional variables in its premises,
+              the conclusion is true if the premises are all true.
+            </p>
+          </section>
+        </article>
+
+        <aside class="col-lg-3 col-md-12 mt-4">
+          <h2 class="d-flex align-items-center mb-3 text-decoration-none">
+            <span class="fs-5 fw-semibold px-2">Supportive resources</span>
+          </h2>
+
+          <ul class="list-group ps-0 ps-0">
+            <li class="list-group-item list-group-item-secondary">
+              <a
+                class="text-decoration-none"
+                href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-Rosen-ebook/dp/B07FF9DY66"
+              >
+                Object Oriented Programming and Its Applications 8th Edition, by
+                Kenneth Rosen (Author)
+              </a>
+            </li>
+            <li class="list-group-item list-group-item-secondary">
+              <a
+                class="text-decoration-none"
+                href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B00B6FAZ2Q"
+              >
+                Object Oriented Programming with Applications 4th Edition,
+                Susanna S. Epp (Author)
+              </a>
+            </li>
+          </ul>
+
+          <h2 class="d-flex align-items-center mb-3 text-decoration-none">
+            <span class="fs-5 fw-semibold px-2 mt-4">Related courses</span>
+          </h2>
+
+          <ul class="list-group ps-0">
+            <li class="list-group-item list-group-item-secondary">
+              <a class="text-decoration-none" href="2-course-overview.html"
+                >Introduction to Object Oriented Programming</a
+              >
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Sitemap</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="index.html" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="courses.html" class="nav-link p-0 text-muted"
+                  >Courses</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link p-0 text-muted"
+                  >About us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contact.html" class="nav-link p-0 text-muted"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Contributers</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="http://www.aau.edu.et/" class="nav-link p-0 text-muted"
+                  >Addis Ababa University</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="http://www.bdu.edu.et/" class="nav-link p-0 text-muted"
+                  >Bahirdar University</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="https://moe.gov.et/" class="nav-link p-0 text-muted"
+                  >Ministry of Eduction</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>Copyright &copy; 2022 E-Learning</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a href="https://facebook.com">
+                <img
+                  class="icon"
+                  src="images/icons/facebook.png"
+                  alt="Facebook icon"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="https://t.me/elearning000">
+                <img
+                  class="icon"
+                  src="images/icons/telegram.png"
+                  alt="Telegram icon"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="https://twitter.com">
+                <img
+                  class="icon"
+                  src="images/icons/twitter.png"
+                  alt="Twitter icon"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="https://youtube.com">
+                <img
+                  class="icon"
+                  src="images/icons/youtube.png"
+                  alt="Youtube icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/errorhandler.js"></script>
+    <script src="js/auth/auth.js"></script>
+    <script src="js/auth/auth-ui.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

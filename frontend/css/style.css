@@ -100,3 +100,7 @@
   color: var(--bs-danger-text);
   font-weight: bold;
 }
+
+.stars {
+  cursor: pointer;
+}

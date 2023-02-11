@@ -50,18 +50,4 @@ quizForm?.addEventListener("submit", (e) => {
   }
 });
 
-// validate login
-const loginForm = document.getElementById("login-form");
-loginForm?.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  const passwordField = loginForm.elements["password"];
-
-  if (passwordField.value.length < 6) {
-    const message = document.querySelector(".message");
-    message.innerHTML = "Password must be atleast 6 characters long.";
-    message.classList.toggle("message--error", true);
-  } else {
-    window.location.href = "index.html";
-  }
-});

@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="User dashboard on E-learing platform" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <title>My Dashboard</title>
+    <title>Log in</title>
   </head>
 
   <body>
@@ -51,64 +50,75 @@
             <a class="nav-link" href="login.html">Login</a>
           </li>
           <li class="nav-item" id="signup-btn">
-            <a class="nav-link" href="signup.html">Register</a>
+            <a class="nav-link active" href="signup.html">Register</a>
           </li>
-          <li class="nav-item" id="dashboard-btn">
-            <a class="nav-link active" href="user-dashboard.html">Dashboard</a>
+          <li class="nav-item collapse" id="dashboard-btn">
+            <a class="nav-link" href="user-dashboard.html">Dashboard</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <section class="container mt-5 min-vh-100">
-      <div class="d-flex justify-content-between">
-        <h1>User Dashboard</h1>
-        <button class="btn btn-danger my-2 text-white" onclick="logout()">
-          Log Out
-        </button>
-      </div>
+    <main class="px-4 py-5 my-5 text-center">
+      <form class="form-signin w-100 m-auto" id="signup-form">
+        <h1 class="h3 mb-3 fw-normal">Sign up</h1>
+        <div class="message"></div>
 
-      <div>
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a href="#" class="tab-button nav-link" data-target="saved"
-              >Saved</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="#"
-              class="tab-button nav-link active"
-              data-target="in-progress"
-              >In progress</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#" class="tab-button nav-link" data-target="completed"
-              >Completed</a
-            >
-          </li>
-        </ul>
+        <div class="form-floating">
+          <input
+            class="form-control"
+            type="text"
+            name="firstname"
+            id="firstname-field"
+            placeholder="First name"
+            required
+          />
+          <label for="firstname-field">First name</label>
+        </div>
 
-        <ul class="list-unstyled px-5 collapse" id="saved">
-          <li class="mt-2" id="saved-message">
-            <strong>You have not saved any course.</strong>
-          </li>
-        </ul>
+        <div class="form-floating">
+          <input
+            class="form-control"
+            type="text"
+            name="lastname"
+            id="lastname-field"
+            placeholder="Last name"
+            required
+          />
+          <label for="lastname-field">Last name</label>
+        </div>
 
-        <ul class="list-unstyled px-5" id="in-progress">
-          <li class="mt-2" id="in-progress-message">
-            <strong>You have no course in progress.</strong>
-          </li>
-        </ul>
+        <div class="form-floating">
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id="email-field"
+            placeholder="Email"
+            required
+          />
+          <label for="email-field">Email</label>
+        </div>
 
-        <ul class="list-unstyled px-5 collapse" id="completed">
-          <li class="mt-2" id="in-progress-message">
-            <strong>You have not completed any course.</strong>
-          </li>
-        </ul>
-      </div>
-    </section>
+        <div class="form-floating">
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            id="password-field"
+            placeholder="Password"
+            required
+          />
+          <label for="password-field">Password</label>
+        </div>
+
+        <input
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+          value="Sign Up"
+        />
+      </form>
+    </main>
 
     <div class="container">
       <footer class="py-5">
@@ -209,11 +219,6 @@
     <script src="js/errorhandler.js"></script>
     <script src="js/auth/auth.js"></script>
     <script src="js/auth/auth-ui.js"></script>
-    <script src="js/rating/rating.js"></script>
-    <script src="js/rating/rating-ui.js"></script>
-    <script src="js/enrollment/course.js"></script>
-    <script src="js/enrollment/enroll.js"></script>
-    <script src="js/ui/enrollment.ui.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
