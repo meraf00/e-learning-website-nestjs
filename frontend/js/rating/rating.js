@@ -24,7 +24,7 @@ const get_my_course_rating = async (course_id) => {
     method: "GET",
     mode: "cors",
   }).catch(handleError);
-
+  
   return (await response.json()).rating;
 };
 

@@ -1,12 +1,16 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
+import { User } from "../user/models/user.entity";
 import { QueryCourseDto } from "./models/dto/QueryCourse.dto";
 import { Course } from "./models/course.entity";
 
 @Injectable()
 export class CourseService {    
     constructor(
+        @InjectRepository(User)
+        private userRepository: Repository<User>,
+
         @InjectRepository(Course)
         private courseRepository: Repository<Course>,
               
@@ -44,12 +48,14 @@ export class CourseService {
 
     async getPaginatedCourses(query: QueryCourseDto): Promise<Course[]> {         
         const courses = await this.courseRepository
-               .createQueryBuilder("course")                           
+               .createQueryBuilder("course")            
+               .leftJoin("course.ratings", "ratings")              
                .addGroupBy("course.id")
                .select("course.id", "id")
                .addSelect("course.description", "description")
                .addSelect("course.title", "title")
-               .addSelect("course.img_url", "img_url")               
+               .addSelect("course.img_url", "img_url")
+               .addSelect("AVG(ratings.rating)", "rating") 
                .where("course.title like :title and course.difficulty like :difficulty", 
                 { 
                     title:`%${query.title ? query.title : ""}%`, 
@@ -63,6 +69,18 @@ export class CourseService {
     }
 
     async getCourseById (id: number): Promise<Course> {
-        return this.courseRepository.findOne({id})
+        const course = await this.courseRepository
+            .createQueryBuilder("course") 
+            .where("course.id = :id", {id})          
+            .leftJoin("course.ratings", "ratings")              
+            .addGroupBy("course.id")
+            .select("course.id", "id")
+            .addSelect("course.description", "description")
+            .addSelect("course.title", "title")
+            .addSelect("course.img_url", "img_url")
+            .addSelect("AVG(ratings.rating)", "rating")
+            .getRawOne()
+
+        return course;
     }
 }
