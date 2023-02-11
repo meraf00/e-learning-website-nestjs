@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { Enrollment } from "../../enrollment/models/enrollement.entity";
+import { Rating } from "../../rating/models/rating.entity";
 
 @Entity()
 export class Course {
@@ -18,6 +19,9 @@ export class Course {
 
   @Column()
   img_url: string;
+
+  @OneToMany(() => Rating, (rating) => rating.course, { onDelete: 'CASCADE'})
+  ratings: Rating[]
 
   @OneToMany(() => Enrollment, (enrollment) => enrollment.course, { onDelete: 'CASCADE'})
   enrollments: Enrollment
