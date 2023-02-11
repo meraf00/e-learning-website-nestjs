@@ -40,12 +40,12 @@ const getLoggedInUser = async (jwt_token) => {
       Authorization: `Bearer ${jwt_token}`,
     },
     mode: "cors",
-  }).catch((res) => {
-    if (res.status == 401) {
-      localStorage.clear();
-      window.location.href = "login.html";
-    }
-  });
+  }).catch(handleError);
+
+  if (response.status == 401) {
+    localStorage.clear();
+    window.location.href = "login.html";
+  }
 
   return await response.json();
 };
