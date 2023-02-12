@@ -41,4 +41,11 @@
 
 2. `Rating` - Users can rate course, view rating, update their rating and remove their rating.
 
-- When user stars course it will be available in the user dashboard page.
+- When user starts course it will be available in the user dashboard page.
+
+
+## Choice of database
+
+We chose to use relational database because the data we tend to store is predictable and the projects database has fixed schema. Relational databases are also preferable for structured data, which is the case for our project. 
+
+Therefore we have User, Course, Rating and Enrollment table. Rating holds rating of users for courses. Enrollment holds the many to many relationship between user and course.
